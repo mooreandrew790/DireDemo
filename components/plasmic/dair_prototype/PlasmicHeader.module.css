@@ -191,8 +191,8 @@
 }
 .freeBox__ju5Xm > :global(.__wab_flex-container) {
   flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
   margin-left: calc(0px - 20px);
   width: calc(100% + 20px);
 }
