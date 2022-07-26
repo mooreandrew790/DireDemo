@@ -14,10 +14,11 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 1440px;
+  width: 100%;
   height: 100%;
   justify-content: flex-start;
   align-items: center;
+  min-width: 0;
   min-height: 0;
   padding: 0px;
 }
@@ -50,13 +51,14 @@
   max-width: 100%;
   width: 1376px;
   height: 533px;
-  left: 32px;
-  top: 144px;
+  left: 0;
+  top: 0;
   align-self: center;
   z-index: 1;
   right: 0;
   flex-shrink: 0;
   border-radius: 8px;
+  margin: 144px auto auto;
 }
 .bannerImage > picture > img {
   object-fit: cover;
