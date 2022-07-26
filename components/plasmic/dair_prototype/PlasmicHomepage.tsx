@@ -58,6 +58,8 @@ export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   container?: p.Flex<"div">;
   header?: p.Flex<typeof Header>;
+  svg?: p.Flex<"svg">;
+  bannerImage?: p.Flex<typeof p.PlasmicImg>;
 };
 
 export interface DefaultHomepageProps {}
@@ -118,6 +120,34 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-name={"header"}
                 data-plasmic-override={overrides.header}
                 className={classNames("__wab_instance", sty.header)}
+                startIcon={
+                  <Searchsvg2Icon
+                    data-plasmic-name={"svg"}
+                    data-plasmic-override={overrides.svg}
+                    className={classNames(projectcss.all, sty.svg)}
+                    role={"img"}
+                  />
+                }
+              />
+
+              <p.PlasmicImg
+                data-plasmic-name={"bannerImage"}
+                data-plasmic-override={overrides.bannerImage}
+                alt={"banner image" as const}
+                className={classNames(sty.bannerImage)}
+                displayHeight={"533px" as const}
+                displayMaxHeight={"none" as const}
+                displayMaxWidth={"100%" as const}
+                displayMinHeight={"0" as const}
+                displayMinWidth={"0" as const}
+                displayWidth={"1376px" as const}
+                loading={"lazy" as const}
+                src={{
+                  src: "/plasmic/dair_prototype/images/f00050A1E18C9D48Aa9Ecf381112344Fpng.png",
+                  fullWidth: 2950,
+                  fullHeight: 1457,
+                  aspectRatio: undefined
+                }}
               />
             </div>
           </div>
@@ -128,9 +158,11 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "container", "header"],
-  container: ["container", "header"],
-  header: ["header"]
+  root: ["root", "container", "header", "svg", "bannerImage"],
+  container: ["container", "header", "svg", "bannerImage"],
+  header: ["header", "svg"],
+  svg: ["svg"],
+  bannerImage: ["bannerImage"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -139,6 +171,8 @@ type NodeDefaultElementType = {
   root: "div";
   container: "div";
   header: typeof Header;
+  svg: "svg";
+  bannerImage: typeof p.PlasmicImg;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -204,6 +238,8 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     container: makeNodeComponent("container"),
     header: makeNodeComponent("header"),
+    svg: makeNodeComponent("svg"),
+    bannerImage: makeNodeComponent("bannerImage"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

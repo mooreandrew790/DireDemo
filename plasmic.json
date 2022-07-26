@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -193,6 +193,16 @@
           "id": "rlxq0GZ6h",
           "name": "Avatar.svg",
           "filePath": "../public/plasmic/dair_prototype/images/avatarsvg.svg"
+        },
+        {
+          "id": "2VVltc2nB",
+          "name": "Rectangle 3469426.jpg",
+          "filePath": "../public/plasmic/dair_prototype/images/rectangle3469426Jpg.jpeg"
+        },
+        {
+          "id": "U-p0ID4eI",
+          "name": "f00050a1e18c9d48aa9ecf381112344f.png",
+          "filePath": "../public/plasmic/dair_prototype/images/f00050A1E18C9D48Aa9Ecf381112344Fpng.png"
         }
       ],
       "indirect": false,

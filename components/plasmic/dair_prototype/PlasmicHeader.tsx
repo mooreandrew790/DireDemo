@@ -73,6 +73,7 @@ export const PlasmicHeader__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicHeader__OverridesType = {
   root?: p.Flex<"div">;
+  freeBox?: p.Flex<"div">;
   group?: p.Flex<"div">;
   group2?: p.Flex<"div">;
   group3?: p.Flex<"div">;
@@ -129,136 +130,146 @@ function PlasmicHeader__RenderFunc(props: {
           sty.root
         )}
       >
-        <div
-          data-plasmic-name={"group"}
-          data-plasmic-override={overrides.group}
-          className={classNames(projectcss.all, sty.group)}
-        >
-          <div
-            data-plasmic-name={"group2"}
-            data-plasmic-override={overrides.group2}
-            className={classNames(projectcss.all, sty.group2)}
+        {true ? (
+          <p.Stack
+            as={"div"}
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox)}
           >
             <div
-              data-plasmic-name={"group3"}
-              data-plasmic-override={overrides.group3}
-              className={classNames(projectcss.all, sty.group3)}
+              data-plasmic-name={"group"}
+              data-plasmic-override={overrides.group}
+              className={classNames(projectcss.all, sty.group)}
             >
               <div
-                data-plasmic-name={"group4"}
-                data-plasmic-override={overrides.group4}
-                className={classNames(projectcss.all, sty.group4)}
+                data-plasmic-name={"group2"}
+                data-plasmic-override={overrides.group2}
+                className={classNames(projectcss.all, sty.group2)}
               >
-                <GroupIcon
-                  className={classNames(projectcss.all, sty.svg__maZ6S)}
-                  role={"img"}
-                />
+                <div
+                  data-plasmic-name={"group3"}
+                  data-plasmic-override={overrides.group3}
+                  className={classNames(projectcss.all, sty.group3)}
+                >
+                  <div
+                    data-plasmic-name={"group4"}
+                    data-plasmic-override={overrides.group4}
+                    className={classNames(projectcss.all, sty.group4)}
+                  >
+                    <GroupIcon
+                      className={classNames(projectcss.all, sty.svg__maZ6S)}
+                      role={"img"}
+                    />
+                  </div>
+
+                  <VectorIcon
+                    className={classNames(projectcss.all, sty.svg__ypmWp)}
+                    role={"img"}
+                  />
+
+                  <Vector2Icon
+                    className={classNames(projectcss.all, sty.svg__bifZm)}
+                    role={"img"}
+                  />
+
+                  <Vector3Icon
+                    className={classNames(projectcss.all, sty.svg__puZoU)}
+                    role={"img"}
+                  />
+                </div>
               </div>
 
-              <VectorIcon
-                className={classNames(projectcss.all, sty.svg__ypmWp)}
-                role={"img"}
-              />
-
-              <Vector2Icon
-                className={classNames(projectcss.all, sty.svg__bifZm)}
-                role={"img"}
-              />
-
-              <Vector3Icon
-                className={classNames(projectcss.all, sty.svg__puZoU)}
+              <Group2Icon
+                className={classNames(projectcss.all, sty.svg__y97Uo)}
                 role={"img"}
               />
             </div>
-          </div>
 
-          <Group2Icon
-            className={classNames(projectcss.all, sty.svg__y97Uo)}
-            role={"img"}
-          />
-        </div>
-
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__bvOd
-          )}
-        >
-          <React.Fragment>
-            <React.Fragment>{""}</React.Fragment>
-            <span
-              className={"plasmic_default__all plasmic_default__span"}
-              style={{ color: "#FFFFFF" }}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__bvOd
+              )}
             >
-              {"Admin"}
-            </span>
-            <React.Fragment>{""}</React.Fragment>
-          </React.Fragment>
-        </div>
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#FFFFFF" }}
+                >
+                  {"Admin"}
+                </span>
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
 
-        <Input
-          data-plasmic-name={"inputSearch"}
-          data-plasmic-override={overrides.inputSearch}
-          className={classNames("__wab_instance", sty.inputSearch)}
-          endIcon={p.renderPlasmicSlot({
-            defaultContents: (
-              <ChecksvgIcon
-                className={classNames(projectcss.all, sty.svg__jswSo)}
-                role={"img"}
+            <Input
+              data-plasmic-name={"inputSearch"}
+              data-plasmic-override={overrides.inputSearch}
+              className={classNames("__wab_instance", sty.inputSearch)}
+              endIcon={p.renderPlasmicSlot({
+                defaultContents: (
+                  <ChecksvgIcon
+                    className={classNames(projectcss.all, sty.svg__jswSo)}
+                    role={"img"}
+                  />
+                ),
+
+                value: args.endIcon
+              })}
+              startIcon={p.renderPlasmicSlot({
+                defaultContents: (
+                  <Searchsvg2Icon
+                    className={classNames(projectcss.all, sty.svg___4Ev8O)}
+                    role={"img"}
+                  />
+                ),
+
+                value: args.startIcon
+              })}
+            />
+
+            <Button
+              data-plasmic-name={"workspace"}
+              data-plasmic-override={overrides.workspace}
+              className={classNames("__wab_instance", sty.workspace)}
+              color={"white" as const}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__u5Lpc
+                )}
+              >
+                {"Create New Workspace"}
+              </div>
+            </Button>
+
+            {true ? (
+              <StarIconButton
+                data-plasmic-name={"starIconButton"}
+                data-plasmic-override={overrides.starIconButton}
+                className={classNames("__wab_instance", sty.starIconButton)}
               />
-            ),
+            ) : null}
 
-            value: args.endIcon
-          })}
-          startIcon={p.renderPlasmicSlot({
-            defaultContents: (
-              <Searchsvg2Icon
-                className={classNames(projectcss.all, sty.svg___4Ev8O)}
-                role={"img"}
-              />
-            ),
+            <AlarmIconButton
+              data-plasmic-name={"alarmIconButton"}
+              data-plasmic-override={overrides.alarmIconButton}
+              className={classNames("__wab_instance", sty.alarmIconButton)}
+            />
 
-            value: args.startIcon
-          })}
-        />
-
-        <Button
-          data-plasmic-name={"workspace"}
-          data-plasmic-override={overrides.workspace}
-          className={classNames("__wab_instance", sty.workspace)}
-          color={"white" as const}
-        >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__u5Lpc
-            )}
-          >
-            {"Create New Workspace"}
-          </div>
-        </Button>
-
-        {true ? (
-          <StarIconButton
-            data-plasmic-name={"starIconButton"}
-            data-plasmic-override={overrides.starIconButton}
-            className={classNames("__wab_instance", sty.starIconButton)}
-          />
+            <UserSelect
+              data-plasmic-name={"userSelect"}
+              data-plasmic-override={overrides.userSelect}
+              className={classNames("__wab_instance", sty.userSelect)}
+            />
+          </p.Stack>
         ) : null}
-
-        <AlarmIconButton
-          data-plasmic-name={"alarmIconButton"}
-          data-plasmic-override={overrides.alarmIconButton}
-          className={classNames("__wab_instance", sty.alarmIconButton)}
-        />
-
-        <UserSelect
-          data-plasmic-name={"userSelect"}
-          data-plasmic-override={overrides.userSelect}
-          className={classNames("__wab_instance", sty.userSelect)}
-        />
       </p.Stack>
     ) : null
   ) as React.ReactElement | null;
@@ -267,6 +278,19 @@ function PlasmicHeader__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "freeBox",
+    "group",
+    "group2",
+    "group3",
+    "group4",
+    "inputSearch",
+    "workspace",
+    "starIconButton",
+    "alarmIconButton",
+    "userSelect"
+  ],
+  freeBox: [
+    "freeBox",
     "group",
     "group2",
     "group3",
@@ -292,6 +316,7 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  freeBox: "div";
   group: "div";
   group2: "div";
   group3: "div";
@@ -364,6 +389,7 @@ export const PlasmicHeader = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
     group: makeNodeComponent("group"),
     group2: makeNodeComponent("group2"),
     group3: makeNodeComponent("group3"),
