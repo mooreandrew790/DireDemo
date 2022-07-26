@@ -73,7 +73,6 @@ export const PlasmicHeader__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicHeader__OverridesType = {
   root?: p.Flex<"div">;
-  freeBox?: p.Flex<"div">;
   group?: p.Flex<"div">;
   group2?: p.Flex<"div">;
   group3?: p.Flex<"div">;
@@ -133,10 +132,8 @@ function PlasmicHeader__RenderFunc(props: {
         {true ? (
           <p.Stack
             as={"div"}
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
             hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox)}
+            className={classNames(projectcss.all, sty.freeBox__jmIg2)}
           >
             <div
               data-plasmic-name={"group"}
@@ -232,36 +229,44 @@ function PlasmicHeader__RenderFunc(props: {
               })}
             />
 
-            <Button
-              data-plasmic-name={"workspace"}
-              data-plasmic-override={overrides.workspace}
-              className={classNames("__wab_instance", sty.workspace)}
-              color={"white" as const}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__u5Lpc
-                )}
-              >
-                {"Create New Workspace"}
-              </div>
-            </Button>
-
             {true ? (
-              <StarIconButton
-                data-plasmic-name={"starIconButton"}
-                data-plasmic-override={overrides.starIconButton}
-                className={classNames("__wab_instance", sty.starIconButton)}
-              />
-            ) : null}
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__ju5Xm)}
+              >
+                <Button
+                  data-plasmic-name={"workspace"}
+                  data-plasmic-override={overrides.workspace}
+                  className={classNames("__wab_instance", sty.workspace)}
+                  color={"white" as const}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__u5Lpc
+                    )}
+                  >
+                    {"Create New Workspace"}
+                  </div>
+                </Button>
 
-            <AlarmIconButton
-              data-plasmic-name={"alarmIconButton"}
-              data-plasmic-override={overrides.alarmIconButton}
-              className={classNames("__wab_instance", sty.alarmIconButton)}
-            />
+                {true ? (
+                  <StarIconButton
+                    data-plasmic-name={"starIconButton"}
+                    data-plasmic-override={overrides.starIconButton}
+                    className={classNames("__wab_instance", sty.starIconButton)}
+                  />
+                ) : null}
+
+                <AlarmIconButton
+                  data-plasmic-name={"alarmIconButton"}
+                  data-plasmic-override={overrides.alarmIconButton}
+                  className={classNames("__wab_instance", sty.alarmIconButton)}
+                />
+              </p.Stack>
+            ) : null}
 
             <UserSelect
               data-plasmic-name={"userSelect"}
@@ -278,19 +283,6 @@ function PlasmicHeader__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "freeBox",
-    "group",
-    "group2",
-    "group3",
-    "group4",
-    "inputSearch",
-    "workspace",
-    "starIconButton",
-    "alarmIconButton",
-    "userSelect"
-  ],
-  freeBox: [
-    "freeBox",
     "group",
     "group2",
     "group3",
@@ -316,7 +308,6 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  freeBox: "div";
   group: "div";
   group2: "div";
   group3: "div";
@@ -389,7 +380,6 @@ export const PlasmicHeader = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
     group: makeNodeComponent("group"),
     group2: makeNodeComponent("group2"),
     group3: makeNodeComponent("group3"),
