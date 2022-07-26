@@ -140,7 +140,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMaxWidth={"100%" as const}
                 displayMinHeight={"0" as const}
                 displayMinWidth={"0" as const}
-                displayWidth={"1376px" as const}
+                displayWidth={"auto" as const}
                 loading={"lazy" as const}
                 src={{
                   src: "/plasmic/dair_prototype/images/f00050A1E18C9D48Aa9Ecf381112344Fpng.png",
