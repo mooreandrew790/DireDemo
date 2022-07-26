@@ -265,14 +265,14 @@ function PlasmicHeader__RenderFunc(props: {
                   data-plasmic-override={overrides.alarmIconButton}
                   className={classNames("__wab_instance", sty.alarmIconButton)}
                 />
+
+                <UserSelect
+                  data-plasmic-name={"userSelect"}
+                  data-plasmic-override={overrides.userSelect}
+                  className={classNames("__wab_instance", sty.userSelect)}
+                />
               </p.Stack>
             ) : null}
-
-            <UserSelect
-              data-plasmic-name={"userSelect"}
-              data-plasmic-override={overrides.userSelect}
-              className={classNames("__wab_instance", sty.userSelect)}
-            />
           </p.Stack>
         ) : null}
       </p.Stack>
