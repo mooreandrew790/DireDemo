@@ -1,0 +1,62 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  width: 490px;
+  height: auto;
+  align-items: center;
+  justify-content: flex-start;
+  background: #5c34d3;
+  position: relative;
+  border-radius: 6px;
+  padding: 7px 11px;
+  border: 1px solid #5c34d3;
+}
+.startIconContainer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  left: auto;
+  top: auto;
+  margin-right: 8px;
+}
+.slotTargetStartIcon {
+  color: #90908c;
+}
+.svg__zlx8Q {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+  color: #ffffff;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+.input {
+  width: 100%;
+  left: auto;
+  top: auto;
+  background: #ffffff00;
+  color: #ffffff;
+  min-width: 0;
+  padding: 0px;
+  border-width: 0px;
+}
+.endIconContainer {
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  left: auto;
+  top: auto;
+  margin-left: 8px;
+  display: none;
+}
+.svg__zjNd0 {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}

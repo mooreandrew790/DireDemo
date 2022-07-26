@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  background: #5c34d3;
+  position: relative;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #5c34d3;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: #ffffff;
+  width: 16.67px;
+  height: 16.67px;
+  flex-shrink: 0;
+}
